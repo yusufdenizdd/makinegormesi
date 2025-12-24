@@ -1,0 +1,32 @@
+# --- SİSTEM DOSYALARI ---
+.DS_Store
+Thumbs.db
+
+# --- PYTHON (BACKEND) ---
+# Sanal ortam klasörleri (EN BÜYÜK BOYUT BU)
+venv/
+env/
+.env
+__pycache__/
+*.pyc
+*.pyo
+
+# --- NODEJS & REACT NATIVE (FRONTEND) ---
+# Kütüphaneler (ÇOK BÜYÜK)
+node_modules/
+
+# Expo geçici dosyaları
+.expo/
+dist/
+web-build/
+
+# Native Build Dosyaları (1 GB üstü tutabilir, bunları silmezsen yüklenmez)
+ios/
+android/
+*.apk
+*.ipa
+
+# Loglar
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
