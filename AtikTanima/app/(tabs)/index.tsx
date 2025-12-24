@@ -143,18 +143,21 @@ export default function HomeScreen() {
       // -----------------------------
 
       // IP Adresin (172.23.25.207) doğruydu, aynen kalsın.
-      const response = await fetch("http://192.168.1.33:8000/api/predict", {
-        method: "POST",
-        body: formData,
-        // Web'de 'Content-Type' header'ını MANUEL EKLEMEK GEREKMEZ, tarayıcı halleder.
-        // O yüzden header kısmını siliyoruz veya sadece mobilde ekliyoruz.
-        headers:
-          Platform.OS === "web"
-            ? {}
-            : {
-                "Content-Type": "multipart/form-data",
-              },
-      });
+      const response = await fetch(
+        "https://nesne-tespiti-backend.onrender.com/api/predict",
+        {
+          method: "POST",
+          body: formData,
+          // Web'de 'Content-Type' header'ını MANUEL EKLEMEK GEREKMEZ, tarayıcı halleder.
+          // O yüzden header kısmını siliyoruz veya sadece mobilde ekliyoruz.
+          headers:
+            Platform.OS === "web"
+              ? {}
+              : {
+                  "Content-Type": "multipart/form-data",
+                },
+        }
+      );
 
       // Backend'den JSON yerine hata mesajı dönerse yakalamak için:
       if (!response.ok) {
