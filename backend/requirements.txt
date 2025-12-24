@@ -1,6 +1,6 @@
 Flask
 flask-cors
 numpy
-tensorflow-cpu
+tflite-runtime
 opencv-python-headless
 gunicorn
